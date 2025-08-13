@@ -1,0 +1,210 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Orla Consultoria Design System - Pantone Color Palette */
+
+@layer base {
+  :root {
+    /* Orla Consultoria Brand Colors - Light Mode */
+    --background: 0 0% 98%;
+    --foreground: 180 20% 25%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 180 20% 25%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 180 20% 25%;
+
+    --primary: 180 100% 18%;       /* Teal escuro baseado na referência */
+    --primary-foreground: 0 0% 100%;
+    --primary-dark: 180 100% 15%;  /* Versão mais escura do teal */
+
+    --secondary: 180 80% 25%;      /* Medium teal */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 180 5% 94%;
+    --muted-foreground: 180 8% 45%;
+
+    --accent: 180 90% 22%;         /* Accent teal vibrante */
+    --accent-foreground: 0 0% 100%;
+
+    --success: 140 60% 45%;        /* Success green */
+    --success-foreground: 0 0% 100%;
+
+    --warning: 35 90% 55%;         /* Warning orange */
+    --warning-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 180 8% 88%;
+    --input: 180 8% 88%;
+    --ring: 180 100% 18%;
+
+    --radius: 0.75rem;
+
+    /* Sidebar specific colors */
+    --sidebar-background: 180 100% 18%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 180 100% 15%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 180 80% 25%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 180 100% 15%;
+    --sidebar-ring: 180 100% 18%;
+
+    /* Orla Brand Colors - Atualizado com novo Teal */
+    --orla-teal-dark: 180 100% 15%;    /* Dark teal baseado na referência */
+    --orla-teal: 180 100% 18%;         /* Main teal baseado na referência */
+    --orla-teal-medium: 180 80% 25%;   /* Medium teal */
+    --orla-teal-light: 180 60% 35%;    /* Light teal */
+    --orla-green-dark: 165 35% 25%;    /* Dark green acinzentado */
+    --orla-green: 165 30% 30%;         /* Medium green acinzentado */
+    --orla-green-light: 165 25% 40%;   /* Light green acinzentado */
+    --orla-blue-dark: 185 35% 25%;     /* Dark blue acinzentado */
+    --orla-blue: 185 30% 30%;          /* Medium blue acinzentado */
+    --orla-blue-light: 185 25% 40%;    /* Light blue acinzentado */
+    --orla-gray-dark: 180 15% 35%;     /* Dark gray */
+    --orla-gray: 180 10% 50%;          /* Medium gray */
+    --orla-gray-light: 180 5% 94%;     /* Light gray */
+    
+    /* Gradients com Turquesa Acinzentado */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary-dark)), hsl(var(--primary)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--orla-green)), hsl(var(--orla-blue)));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--orla-gray-light)));
+    --gradient-orla: linear-gradient(135deg, hsl(var(--primary-dark)), hsl(var(--primary)));
+    
+    /* Enhanced Shadows */
+    --shadow-card: 0 4px 20px hsl(var(--orla-teal) / 0.08);
+    --shadow-hover: 0 8px 30px hsl(var(--orla-teal) / 0.12);
+    --shadow-focus: 0 0 0 3px hsl(var(--orla-teal) / 0.15);
+    --shadow-strong: 0 20px 60px hsl(var(--orla-teal) / 0.15);
+  }
+
+  .dark {
+    --background: 240 15% 8%;
+    --foreground: 265 25% 95%;
+
+    --card: 240 15% 10%;
+    --card-foreground: 265 25% 95%;
+
+    --popover: 240 15% 10%;
+    --popover-foreground: 265 25% 95%;
+
+    --primary: 265 70% 65%;
+    --primary-foreground: 240 15% 8%;
+
+    --secondary: 260 60% 45%;
+    --secondary-foreground: 265 25% 95%;
+
+    --muted: 240 15% 15%;
+    --muted-foreground: 240 15% 65%;
+
+    --accent: 195 60% 50%;
+    --accent-foreground: 265 25% 95%;
+
+    --success: 140 50% 40%;
+    --success-foreground: 265 25% 95%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 265 25% 95%;
+
+    --border: 240 15% 18%;
+    --input: 240 15% 18%;
+    --ring: 265 70% 65%;
+    
+    --sidebar-background: 240 15% 8%;
+    --sidebar-foreground: 265 25% 95%;
+    --sidebar-primary: 265 70% 65%;
+    --sidebar-primary-foreground: 240 15% 8%;
+    --sidebar-accent: 195 35% 25%;
+    --sidebar-accent-foreground: 265 25% 95%;
+    --sidebar-border: 240 15% 18%;
+    --sidebar-ring: 265 70% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer utilities {
+  /* Wave Loading Animations */
+  @keyframes wave1 {
+    0%, 100% { 
+      transform: translateX(0) scaleY(1);
+    }
+    25% { 
+      transform: translateX(-10px) scaleY(1.1);
+    }
+    50% { 
+      transform: translateX(0) scaleY(0.9);
+    }
+    75% { 
+      transform: translateX(10px) scaleY(1.1);
+    }
+  }
+
+  @keyframes wave2 {
+    0%, 100% { 
+      transform: translateX(0) scaleY(0.9);
+    }
+    33% { 
+      transform: translateX(15px) scaleY(1.2);
+    }
+    66% { 
+      transform: translateX(-5px) scaleY(0.8);
+    }
+  }
+
+  @keyframes wave3 {
+    0%, 100% { 
+      transform: translateX(0) scaleY(0.8);
+    }
+    40% { 
+      transform: translateX(-20px) scaleY(1.3);
+    }
+    80% { 
+      transform: translateX(5px) scaleY(0.7);
+    }
+  }
+
+  .animate-wave-1 {
+    animation: wave1 3s ease-in-out infinite;
+    transform-origin: center bottom;
+  }
+
+  .animate-wave-2 {
+    animation: wave2 2.5s ease-in-out infinite;
+    transform-origin: center bottom;
+    animation-delay: -0.5s;
+  }
+
+  .animate-wave-3 {
+    animation: wave3 2s ease-in-out infinite;
+    transform-origin: center bottom;
+    animation-delay: -1s;
+  }
+
+  /* Floating animation for loading text */
+  @keyframes float {
+    0%, 100% { 
+      transform: translateY(0px);
+    }
+    50% { 
+      transform: translateY(-5px);
+    }
+  }
+
+  .animate-float {
+    animation: float 2s ease-in-out infinite;
+  }
+}

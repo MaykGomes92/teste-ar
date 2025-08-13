@@ -1,0 +1,10 @@
+-- Criar processos específicos para demonstração TechCorp
+INSERT INTO public.processos (id, nome, descricao, macro_processo, responsavel, status, project_info_id, validacao_etapa) VALUES
+('SUB-DEM', 'Análise de Risco de Subscrição', 'Processo de análise técnica dos riscos para precificação e aceitação de apólices', 'Subscrição', 'Equipe TechCorp - Atuário Senior', 'Ativo', 'dd1aceb7-8477-4b8c-8cd6-f68de1186417', 3),
+('COT-DEM', 'Processo de Cotação', 'Processo de geração e entrega de cotações para clientes prospectivos', 'Subscrição', 'Equipe TechCorp - Coordenador Comercial', 'Ativo', 'dd1aceb7-8477-4b8c-8cd6-f68de1186417', 3),
+('REG-DEM', 'Regulação de Sinistros', 'Processo de avaliação e regulação de sinistros reportados', 'Sinistros', 'Equipe TechCorp - Gerente Técnico', 'Ativo', 'dd1aceb7-8477-4b8c-8cd6-f68de1186417', 3),
+('PAG-DEM', 'Pagamento de Sinistros', 'Processo de liquidação e pagamento de sinistros aprovados', 'Sinistros', 'Equipe TechCorp - Supervisor Financeiro', 'Ativo', 'dd1aceb7-8477-4b8c-8cd6-f68de1186417', 3),
+('INV-DEM', 'Gestão de Portfólio', 'Processo de gestão e monitoramento da carteira de investimentos', 'Investimentos', 'Equipe TechCorp - Gestor de Investimentos', 'Ativo', 'dd1aceb7-8477-4b8c-8cd6-f68de1186417', 3),
+('CRE-DEM', 'Análise de Risco de Crédito', 'Processo de avaliação de risco de crédito das contrapartes', 'Investimentos', 'Equipe TechCorp - Analista de Risco', 'Ativo', 'dd1aceb7-8477-4b8c-8cd6-f68de1186417', 2),
+('CON-DEM', 'Controle Contábil', 'Processo de registro e controle contábil das operações', 'Contabilidade', 'Equipe TechCorp - Controller', 'Ativo', 'dd1aceb7-8477-4b8c-8cd6-f68de1186417', 3),
+('COM-DEM', 'Compliance Regulatório', 'Processo de monitoramento e adequação às normas regulatórias', 'Compliance', 'Equipe TechCorp - Gerente de Compliance', 'Ativo', 'dd1aceb7-8477-4b8c-8cd6-f68de1186417', 2);
